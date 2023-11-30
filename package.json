@@ -1,8 +1,8 @@
 {
-    "name": "frontend_krazer1",
+    "name": "eprets",
     "version": "1.0.0",
     "description": "course front junior",
-    "author": "isfedortsov@gmail.com",
+    "author": "katya.prets@gmail.com",
     "devDependencies": {
         "autoprefixer": "10.4.2",
         "browser-sync": "^2.27.7",
