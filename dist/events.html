@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>Lenni Art</title>
   <link rel="stylesheet" href="styles/styles.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 
@@ -16,7 +17,7 @@
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
         <svg class="page-header__logo-img" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
       <nav class="page-header__nav">
@@ -24,15 +25,37 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+        <div class="page-header__nav-user">
+          <a href="#" class="link page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
       <div class="page-header__btn-container">
-        <a href="#" class="btn page-header__user-btn">Войти</a>
+        <a href="#" class="page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
   </header>
 
 
   <main class="main">
+    <div class="breadcrumbs">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+      <a href="#" class="breadcrumbs__link">Раздел</a>
+      <a href="#" class="breadcrumbs__link">Страница раздела</a>
+    </div>
+
     <div class="events">
       <section class="listing events__listing">
         <h2 class="events__title title">Мероприятия</h2>
@@ -40,7 +63,7 @@
         <div class="listing__events-list">
           <!--prettier-ignore-->
           <article class="card-event listing__card-event">
-            <a href="#" class="card-event__link">
+            <a href="../event.html" class="card-event__link">
               <picture class="card-event__picture">
                 <img src="assets/images/events/nirvana.jpg" class="card-event__picture-img" alt="nirvana" />
               </picture>
@@ -53,7 +76,7 @@
             </a>
           </article>
           <article class="card-event listing__card-event">
-            <a href="#" class="card-event__link">
+            <a href="../event.html" class="card-event__link">
               <picture class="card-event__picture">
                 <img src="assets/images/events/stuff.jpg" class="card-event__picture-img" alt="stuff" />
               </picture>
@@ -66,7 +89,7 @@
             </a>
           </article>
           <article class="card-event listing__card-event">
-            <a href="#" class="card-event__link">
+            <a href="../event.html" class="card-event__link">
               <picture class="card-event__picture">
                 <img src="assets/images/events/sade.jpg" class="card-event__picture-img" alt="sade" />
               </picture>
@@ -79,7 +102,7 @@
             </a>
           </article>
           <article class="card-event listing__card-event">
-            <a href="#" class="card-event__link">
+            <a href="../event.html" class="card-event__link">
               <picture class="card-event__picture">
                 <img src="assets/images/events/malevich.jpg" class="card-event__picture-img" alt="malevich" />
               </picture>
@@ -92,7 +115,7 @@
             </a>
           </article>
           <article class="card-event listing__card-event">
-            <a href="#" class="card-event__link">
+            <a href="../event.html" class="card-event__link">
               <picture class="card-event__picture">
                 <img src="assets/images/events/tatler.jpg" class="card-event__picture-img" alt="tatler" />
               </picture>
@@ -105,7 +128,7 @@
             </a>
           </article>
           <article class="card-event listing__card-event">
-            <a href="#" class="card-event__link">
+            <a href="../event.html" class="card-event__link">
               <picture class="card-event__picture">
                 <img src="assets/images/events/theHatters.jpg" class="card-event__picture-img" alt="tatler" />
               </picture>
@@ -119,19 +142,19 @@
           </article>
 
         </div>
-        <div class="events__link link link--vertical">
+        <a href="#" class="events__link link link--vertical">
           <span class="link__name">Показать еще</span>
-          <svg class="link__icon" width="62" height="92">
-            <use xlink:href="assets/icons/symbols.svg#vertical_link"></use>
-          </svg>
-        </div>
+          <div class="link__arrow arrow arrow--vertical">
+            <svg class="arrow__icon" width="91" height="60">
+              <use xlink:href="assets/icons/symbols.svg#link"></use>
+            </svg>
+          </div>
+        </a>
       </section>
 
       <section class="tariff events__tariff">
         <div class="tariff__container">
-          <h2 class="tariff__title title section-title">
-            Дополнительные услуги
-          </h2>
+          <h2 class="tariff__title title">Дополнительные услуги</h2>
 
           <p class="tariff__description">
             Перед запуском проекта, мы подготавливаем подробную смету и
@@ -141,10 +164,10 @@
             мероприятия на высшем уровне.
           </p>
 
-          <table class="tariff__tariff-table table">
+          <table class="events__tariffs-table table">
             <thead class="table__head">
               <tr class="table__head-tr">
-                <th class="table__th"></th>
+                <th class="table__th table__th--hidden"></th>
                 <th class="table__th">Тариф «Light»</th>
                 <th class="table__th">Тариф «Promo»</th>
                 <th class="table__th">Тариф «All stars»</th>
@@ -155,7 +178,7 @@
                 <th class="table__body-th">Стоимость за час</th>
                 <td class="table__td">1 000 ₽</td>
                 <td class="table__td">3 000 ₽</td>
-                <td class="table__td">от 6 000 ₽</td>
+                <td class="table__td">3 000 ₽</td>
               </tr>
               <tr class="table__tr">
                 <th class="table__body-th">Ведущий мероприятия</th>
@@ -223,6 +246,7 @@
                   <span class="ok"></span>
                 </td>
               </tr>
+
               <tr class="table__tr">
                 <th class="table__body-th">Клининг</th>
                 <td class="table__td"></td>
@@ -231,13 +255,16 @@
                   <span class="ok"></span>
                 </td>
               </tr>
-              <tr class="table__tr">
-                <th class="table__body-th"></th>
-                <td class="table__td"></td>
-                <td class="table__td"></td>
-                <td class="table__td"></td>
-              </tr>
             </tbody>
+
+            <tfoot class="table__footer">
+              <tr class="table__footer-tr">
+                <th class="table__footer-th"></th>
+                <th class="table__footer-th">Тариф «Light»</th>
+                <th class="table__footer-th">Тариф «Promo»</th>
+                <th class="table__footer-th">Тариф «All stars»</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </section>
@@ -246,54 +273,54 @@
         <div class="offers__container">
           <h3 class="offers__i-want">Я хочу:</h3>
           <div class="offers__btns">
-            <a href="#" class="offers__btn btn btn--red">Провести мероприятия</a>
-            <a href="#" class="offers__btn btn">Стать арендатором</a>
+            <a href="#" class="offers__btn-1 btn btn--red">Провести мероприятия</a>
+            <a href="#" class="offers__btn-2 btn">Стать арендатором</a>
           </div>
         </div>
       </section>
 
 
-      <section class="contacts events__contacts">
-        <div class="contacts__container">
-          <div class="contacts__items contacts__items--fdrow">
-            <div class="contacts-item contacts-item--fdcol">
-              <div class="contacts-item__img">
-                <svg class="contacts-item__icon" width="24" height="24">
+      <section class="organisation events__organisation">
+        <div class="organisation__container">
+          <div class="organisation__items">
+            <div class="organisation__item organisation-item">
+              <div class="organisation-item__img">
+                <svg class="organisation-item__icon" width="24" height="24">
                   <use xlink:href="assets/icons/symbols.svg#information"></use>
                 </svg>
               </div>
-              <div class="contacts-item__content">
-                <h4 class="contacts-item__title">Цены</h4>
-                <p class="contacts-item__info contacts-item__info--mw401 contacts-item__info--tacenter">
+              <div class="organisation-item__content">
+                <h4 class="organisation-item__title">Цены</h4>
+                <p class="organisation-item__info">
                   Цены, указанные на сайте носят информационный характер. Мы
                   придерживаемся индивидуального подхода в работе с клиентом.
                 </p>
               </div>
             </div>
-            <div class="contacts-item contacts-item--fdcol">
-              <div class="contacts-item__img">
-                <svg class="contacts-item__icon" width="24" height="24">
+            <div class="organisation__item organisation-item">
+              <div class="organisation-item__img">
+                <svg class="organisation-item__icon" width="24" height="24">
                   <use xlink:href="assets/icons/symbols.svg#contact"></use>
                 </svg>
               </div>
-              <div class="contacts-item__content">
-                <h4 class="contacts-item__title">Отдел аренды</h4>
-                <p class="contacts-item__info contacts-item__info--tacenter">
+              <div class="organisation-item__content">
+                <h4 class="organisation-item__title">Отдел аренды</h4>
+                <p class="organisation-item__info">
                   Отдел организации мероприятий
                 </p>
-                <a href="tel: +74993500730" class="contacts-item__info contacts-item__info--tacenter">+7 499 350 0730</a>
-                <a href="mailto: hi@tagree.ru" class="contacts-item__info contacts-item__info--tacenter">hi@tagree.ru</a>
+                <a href="tel:+74993500730" class="organisation-item__info">+7 499 350 0730</a>
+                <a href="mailto:hi@tagree.ru" class="organisation-item__info">hi@tagree.ru</a>
               </div>
             </div>
-            <div class="contacts-item contacts-item--fdcol">
-              <div class="contacts-item__img">
-                <svg class="contacts-item__icon" width="24" height="24">
+            <div class="organisation__item organisation-item">
+              <div class="organisation-item__img">
+                <svg class="organisation-item__icon" width="24" height="24">
                   <use xlink:href="assets/icons/symbols.svg#handshake"></use>
                 </svg>
               </div>
-              <div class="contacts-item__content">
-                <h4 class="contacts-item__title">Отдел мероприятий</h4>
-                <p class="contacts-item__info contacts-item__info--mw401 contacts-item__info--tacenter">
+              <div class="organisation-item__content">
+                <h4 class="organisation-item__title">Отдел мероприятий</h4>
+                <p class="organisation-item__info">
                   Мы имеем все возможности для того, чтобы помочь как малому
                   бизнесу и молодым талантам, так и большим корпорациям и
                   холдингам.
@@ -320,17 +347,17 @@
         </nav>
 
         <form class="page-footer__subscribe-form subscribe-form">
-          <label class="subscribe-form__field">
+          <div class="subscribe-form__field">
             <span class="subscribe-form__field-label">Подпишись и будь в курсе происходящего</span>
 
             <input class="subscribe-form__field-input" type="email" placeholder="Email" name="email" required />
 
             <button class="subscribe-form__send-btn" type="submit" name="send">
-              Отправить
+              Подписаться
             </button>
-          </label>
+          </div>
 
-          <label class="check">
+          <label class="check check--pt0 subscribe-form__check">
             <input class="check__input" type="checkbox" name="agree" required checked />
 
             <span class="check__mark"></span>
@@ -343,9 +370,9 @@
 
       <div class="page-footer__vault">
         <div class="page-footer__policy">
-          <span class="page-footer__millennials">© Millennials 2022</span>
-          <span class="page-footer__confident">Политика конфиденциальности</span>
-          <span class="page-footer__cookies">Cookies</span>
+          <a href="#" class="link page-footer__millennials">© Millennials 2022</a>
+          <a href="#" class="link page-footer__confident">Политика конфиденциальности</a>
+          <a href="#" class="link page-footer__cookies">Cookies</a>
         </div>
         <div class="page-footer__social">
           <a href="#" class="page-footer__inst-link">
@@ -355,15 +382,16 @@
           </a>
           <a href="#" class="page-footer__inst-link">
             <svg class="page-footer__social-icon" width="58" height="58">
-              <use xlink:href="assets/icons/symbols.svg#social_inst"></use>
+              <use xlink:href="assets/icons/symbols.svg#social_vk"></use>
             </svg>
           </a>
         </div>
         <div class="page-footer__tagree">
-          <span class="page-footer__tagree-label">Создание и продвижение</span>
-          <svg class="page-footer__tagree-icon" width="56" height="17">
-            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
-          </svg>
+          <a href="#" class="link page-footer__tagree-label">Создание и продвижение
+            <svg class="page-footer__tagree-icon" width="56" height="17">
+              <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
